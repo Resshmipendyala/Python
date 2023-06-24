@@ -1,0 +1,27 @@
+# Rock wins against Scissors
+# Scissors win against Paper
+# Paper wins against Rock
+
+import random
+
+users_choice = int(input((""" 
+0 means Rock
+1 means Paper
+2 means Scissors 
+Enter your Choice:""")))
+if users_choice > 2:
+    print("Error!!!! Numbers must be 0, 1 or 2(YOU LOST")
+else:
+    computers_choice = int(random.randint(0, 2))
+    print("computers_choice: ", computers_choice)
+    if computers_choice == users_choice:
+        print("DRAW")
+    elif computers_choice == 0 and users_choice == 2:
+        print("YOU LOST")
+    elif users_choice == 0 and computers_choice == 2:
+        print("YOU WIN")
+    elif computers_choice > users_choice:
+        print("YOU LOST")
+    elif users_choice > computers_choice:
+        print("YOU WIN")
+
